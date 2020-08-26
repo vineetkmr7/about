@@ -1,7 +1,7 @@
 {
   "name": "about",
   "version": "0.0.0",
-  "homepage": "https://github.com/vineetkmr7/about",
+  "homepage": "https://vineetkmr7.github.io/about/",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
