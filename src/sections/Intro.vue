@@ -46,7 +46,7 @@
         :transition="{ duration: 1.5, delay: 2 }"
       >
         <div class="flex justify-center items-center">
-          <div class="relative size-80 flex justify-center items-center">
+          <div class="relative size-60 lg:size-80 flex justify-center items-center">
             <motion.div
               class="absolute inset-0 rounded-full bg-gradient-to-tl from-primary via-primary-1/2 to-primary-1/4"
               :initial = "{ opacity: 0.8, scale: 1 }"
@@ -54,7 +54,7 @@
               :transition="{ duration: 3, times: [0, 0.5, 1], repeat: Infinity, repeatType: 'reverse', ease: 'easeInOut' }"
             >
             </motion.div>
-            <div class="text-8xl z-10">👨‍💻</div>
+            <div class="text-6xl lg:text-8xl z-10">👨‍💻</div>
           </div>
         </div>
       </motion.div>

@@ -12,11 +12,11 @@
     <ul class="grid grid-cols-2 gap-4 text-sm text-gray-700 dark:text-gray-300">
       <template v-for="(skill, index) of skillItems" :key="index">
         <motion.li
-          class="flex gap-4 items-center"
+          class="justify-center lg:justify-start flex gap-4 items-center"
           :initial="{ opacity: 0, y: 20 }"
           :while-in-view="{ opacity: 1, y: 0 }"
           :in-view-options="{ once: true }"
-          :transition="{ duration: 1 + (index * 0.2), delay: 1 + (index * 0.2) }"
+          :transition="{ duration: 1, delay: 1 + (index * 0.2) }"
         >
           <AIcon v-if="skill?.icon" :name="skill.icon" />
           <span v-else class="size-6"></span>

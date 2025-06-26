@@ -1,7 +1,7 @@
 <template>
   <button
     @click="$emit('toggleDarkMode')"
-    class="w-10 h-10 rounded-full flex items-center justify-center bg-transparent hover:bg-primary/10 dark:hover:bg-primary-dark/20 transition-colors duration-300"
+    class="w-10 h-10 shadow-md dark:shadow-md shadow-primary/20 dark:shadow-primary/40 rounded-full flex items-center justify-center bg-transparent hover:bg-primary/10 dark:hover:bg-primary-dark/20 transition-colors duration-300"
   >
     <span class="sr-only">Toggle theme</span>
 

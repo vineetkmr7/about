@@ -24,7 +24,7 @@
           class="border-b dark:border-gray-600 mx-12"
           :style="{ width }"
         />
-        <div class="text-xs text-gray-700 dark:text-gray-300">P/ {{ item.page }}</div>
+        <div class="text-nowrap text-xs text-gray-700 dark:text-gray-300">P/ {{ item.page }}</div>
       </div>
     </div>
   </section>
@@ -45,7 +45,7 @@ const { scrollYProgress } = useScroll({
   offset: ['start end', 'end start'],
 })
 
-const width = useTransform(scrollYProgress, [0.1, 0.5], ["0", "70%"])
+const width = useTransform(scrollYProgress, [0.1, 0.5], ["0", "50%"])
 
 console.log("here projects => ", projects)
 </script>

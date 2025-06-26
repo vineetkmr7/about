@@ -20,11 +20,13 @@
             class="flex mb-4 gap-4"
             :initial="{ opacity: 0, x: 20 }"
             :while-in-view="{ opacity: 1, x: 0 }"
-            :transition="{ duration: 1 + (index * 0.2), delay: 0.8 + (index * 0.2), type: 'spring' }"
+            :transition="{ duration: 1, delay: 0.8 + (index * 0.2), type: 'spring' }"
             :in-view-options="{ once: true }"
           >
             <component :is="item.icon" class="size-6" />
-            <a v-if="item?.isUrl" class="underline text-primary" target="_blank" :href="item.value">{{ item.value }}</a>
+            <a v-if="item?.isUrl && item?.url" class="underline text-primary dark:text-primary-dark" target="_blank" :href="item?.url">
+              {{ item.value }} <ArrowUpRightIcon class="inline size-3 ml-1" />
+            </a>
             <span v-else class="grow">{{ item.value }}</span>
           </motion.li>
         </template>
@@ -38,6 +40,7 @@ import Heading from './Heading.vue'
 import PageNumber from '@/components/PageNumber.vue'
 import { motion } from 'motion-v'
 import { useContactItemStore } from '@/stores/contact'
+import { ArrowUpRightIcon } from 'lucide-vue-next'
 
 const { contactItems: items } = useContactItemStore()
 </script>

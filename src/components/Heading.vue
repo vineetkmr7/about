@@ -1,21 +1,21 @@
 <template>
   <div>
-    <div class="relative h-32 inline-block mb-8">
+    <div class="relative mx-auto text-center mb-8">
       <motion.span
-        class="text-9xl font-heading font-bold text-primary dark:text-primary-light select-none"
+        class="block text-7xl sm:text-9xl font-heading font-bold text-primary dark:text-primary-light select-none"
         :initial="{ opacity: 0, y: 40 }"
         :while-in-view="{ opacity: 0.25, y: 0 }"
         :in-view-options="{ once: true }"
-        :transition="{ duration: 2, delay: 1 }"
+        :transition="{ duration: 2, delay: 0.8 }"
       >
         {{ text }}
       </motion.span>
       <motion.h1
-        class="absolute left-1/4 -bottom-4 text-7xl inline-block font-heading font-bold text-primary dark:text-primary-light mb-2"
+        class="absolute left-0 right-0 -bottom-4 text-6xl sm:text-7xl inline-block font-heading font-bold text-primary dark:text-primary-light "
         :initial="{ opacity: 0, y: 20 }"
         :while-in-view="{ opacity: 1, y: 0 }"
         :in-view-options="{ once: true }"
-        :transition="{ duration: 1.2, delay: 1 }"
+        :transition="{ duration: 1.2, delay: 0.8 }"
       >
         {{ text }}
       </motion.h1>

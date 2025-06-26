@@ -14,7 +14,7 @@
         <motion.li
           :initial="{ opacity: 0, x: 20 }"
           :while-in-view="{ opacity: 1, x: 0 }"
-          :transition="{ duration: 1 + (index * 0.2), delay: index * 0.2 }"
+          :transition="{ duration: 1, delay: index * 0.2 }"
           :in-view-options="{ once: true }"
         >
           <p class="font-bold">{{ experience.title }}</p>
