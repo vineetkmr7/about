@@ -10,7 +10,6 @@
     "test:unit": "vitest",
     "lint": "eslint . --fix",
     "format": "prettier --write src/",
-    "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
