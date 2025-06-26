@@ -8,16 +8,16 @@
       ref="index-target"
       class="relative flex-1 max-w-7xl p-4 flex flex-col items-start justify-between gap-12"
     >
-      <Heading class="self-center" text="Projects." />
+      <Heading class="self-center" :text="title" />
       <div
         v-for="(item, index) in projects"
         :key="index"
         class="flex w-full items-center justify-between"
       >
         <div class="flex flex-col">
-          <p class="text-lg font-semibold font-heading text-foreground">{{ item.title }}</p>
+          <p class="text-lg font-semibold font-heading text-foreground">{{ item.client }}</p>
           <p class="text-sm italic font-body text-gray-700 dark:text-gray-300">
-            {{ item.subtitle }}
+            {{ item.name }}
           </p>
         </div>
         <motion.p
@@ -35,13 +35,9 @@ import Heading from '@/components/Heading.vue'
 import PageNumber from '@/components/PageNumber.vue'
 import { motion, useScroll, useTransform } from 'motion-v'
 import { useTemplateRef } from 'vue'
+import { useProjectStore } from '@/stores/project'
 
-const projects = [
-  { title: 'Japan Airline.', subtitle: 'A350-1000 Renderings', page: '05' },
-  { title: 'Matvänlig.', subtitle: 'Timing another way', page: '13' },
-  { title: 'Monolith.', subtitle: 'Coffee, in its Purest Form', page: '23' },
-  { title: 'Lambda light.', subtitle: 'Suspended simplicity', page: '34' },
-]
+const { title, projects } = useProjectStore();
 
 const indexTarget = useTemplateRef('index-target')
 const { scrollYProgress } = useScroll({
@@ -51,4 +47,5 @@ const { scrollYProgress } = useScroll({
 
 const width = useTransform(scrollYProgress, [0.1, 0.5], ["0", "70%"])
 
+console.log("here projects => ", projects)
 </script>

@@ -24,7 +24,8 @@
             :in-view-options="{ once: true }"
           >
             <component :is="item.icon" class="size-6" />
-            <span class="grow">{{ item.value }}</span>
+            <a v-if="item?.isUrl" class="underline text-primary" target="_blank" :href="item.value">{{ item.value }}</a>
+            <span v-else class="grow">{{ item.value }}</span>
           </motion.li>
         </template>
       </ul>

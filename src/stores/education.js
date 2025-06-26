@@ -6,12 +6,12 @@ export const useEducationStore = defineStore('education', () => {
     {
       degree: 'M.Tech in Software Engineering',
       timeline: '2016-2019',
-      university: 'Birla Institute of Technology and Science (BITS), Pilani',
+      university: 'Birla Institute of Technology and Science (BITS), Pilani, India',
     },
     {
       degree: 'B.Sc (Honours) Computer Science',
       timeline: '2012-2015',
-      university: 'Delhi University',
+      university: 'Delhi University, Delhi, India',
     },
   ])
   return { education }

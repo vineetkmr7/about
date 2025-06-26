@@ -2,17 +2,43 @@ import { defineStore } from 'pinia'
 import { ref } from 'vue'
 
 export const useSkillsStore = defineStore('skills', () => {
+  const title = ref('Skills / Techs')
   const skills = ref([
     {
-      degree: 'M.Tech in Software Engineering',
-      timeline: '2016-2019',
-      university: 'Birla Institute of Technology and Science (BITS), Pilani',
+      label: 'HTML',
+      icon: 'html',
+      proficiency: 9,
     },
     {
-      degree: 'B.Sc (Honours) Computer Science',
-      timeline: '2012-2015',
-      university: 'Delhi University',
+      label: 'CSS',
+      icon: 'css',
+      proficiency: 8.5,
+    },
+    {
+      label: 'JavaScript',
+      icon: 'js',
+      proficiency: 8.5,
+    },
+    {
+      label: 'Vue',
+      icon: 'vue',
+      proficiency: 8,
+    },
+    {
+      label: 'Angular',
+      icon: 'angular',
+      proficiency: 7.5,
+    },
+    {
+      label: 'React',
+      icon: 'react',
+      proficiency: 7,
+    },
+    {
+      label: 'Node.js',
+      icon: 'node',
+      proficiency: 7,
     },
   ])
-  return { skills }
+  return { skills, title }
 })

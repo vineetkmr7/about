@@ -1,16 +1,36 @@
 <template>
   <div>
-    <h2 class="text-2xl font-heading font-bold text-foreground mb-8">Skills</h2>
+    <motion.h2
+      class="text-2xl font-heading font-bold text-foreground mb-8"
+      :initial="{ opacity: 0, y: 20 }"
+      :while-in-view="{ opacity: 1, y: 0 }"
+      :in-view-options="{ once: true }"
+      :transition="{ duration: 1, delay: 1 }"
+    >
+      {{ title }}
+    </motion.h2>
     <ul class="grid grid-cols-2 gap-4 text-sm text-gray-700 dark:text-gray-300">
-      <li>Blender</li>
-      <li>Cinema 4D</li>
-      <li>Rhino 3D</li>
-      <li>KeyShot</li>
-      <li>Adobe Suite</li>
-      <li>Figma</li>
-      <li>French – Native</li>
-      <li>English – C1</li>
-      <li>Photography</li>
+      <template v-for="(skill, index) of skillItems" :key="index">
+        <motion.li
+          class="flex gap-4 items-center"
+          :initial="{ opacity: 0, y: 20 }"
+          :while-in-view="{ opacity: 1, y: 0 }"
+          :in-view-options="{ once: true }"
+          :transition="{ duration: 1 + (index * 0.2), delay: 1 + (index * 0.2) }"
+        >
+          <AIcon v-if="skill?.icon" :name="skill.icon" />
+          <span v-else class="size-6"></span>
+          <span>{{ skill.label }}</span>
+        </motion.li>
+      </template>
     </ul>
   </div>
 </template>
+<script setup>
+import { motion } from 'motion-v'
+import { useSkillsStore } from '@/stores/skills';
+import AIcon from './AIcon.vue';
+
+const { skills: skillItems, title } = useSkillsStore();
+
+</script>

@@ -30,5 +30,4 @@ import { useEducationStore } from '@/stores/education'
 import { motion } from 'motion-v'
 
 const { education: educationItems } = useEducationStore()
-console.log('here => ', educationItems)
 </script>

@@ -7,19 +7,19 @@
       :transition="{ duration: 1, delay: 0.8, type: 'spring' }"
       :in-view-options="{ once: true }"
     >
-      Experiences
+      {{ title }}
     </motion.h2>
     <ul class="space-y-10">
-      <template v-for="(experience, index) in experiences" :key="index">
+      <template v-for="(experience, index) in experienceItems" :key="index">
         <motion.li
           :initial="{ opacity: 0, x: 20 }"
           :while-in-view="{ opacity: 1, x: 0 }"
           :transition="{ duration: 1 + (index * 0.2), delay: index * 0.2 }"
           :in-view-options="{ once: true }"
         >
-          <p class="font-bold">{{ experience.company }}</p>
+          <p class="font-bold">{{ experience.title }}</p>
           <p class="text-sm italic text-gray-700 dark:text-gray-300 mb-4">
-            {{ experience.role }} | {{ experience.duration}}
+            {{ experience.subTitle }} | {{ experience.timeline}}
           </p>
           <p class="text-sm text-gray-700 dark:text-gray-300">
             {{ experience.description}}
@@ -32,6 +32,9 @@
 
 <script setup>
 import { motion } from 'motion-v'
+import { useExperienceStore } from '@/stores/experience';
+
+const { title, experience: experienceItems } = useExperienceStore();
 
 const experiences = [
   {

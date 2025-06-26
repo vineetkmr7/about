@@ -6,8 +6,8 @@
       <!-- Left Column -->
       <div class="space-y-12">
         <Heading class="text-center lg:text-left" text="Resume." />
-        <Education class="text-center lg:text-left" />
         <Skills class="text-center lg:text-left" />
+        <Education class="text-center lg:text-left" />
       </div>
 
       <!-- Right Column -->

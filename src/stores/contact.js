@@ -17,11 +17,13 @@ export const useContactItemStore = defineStore('contact', () => {
     {
       label: 'LinkedIn',
       value: 'https://www.linkedin.com/in/imvineetkumar/',
+      isUrl: true,
       icon: Linkedin,
     },
     {
       label: 'Github',
       value: 'https://github.com/vineetkmr7',
+      isUrl: true,
       icon: Github,
     },
   ])
