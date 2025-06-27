@@ -6,7 +6,7 @@
         :initial="{ opacity: 0, y: 40 }"
         :while-in-view="{ opacity: 0.25, y: 0 }"
         :in-view-options="{ once: true }"
-        :transition="{ duration: 2, delay: 0.8 }"
+        :transition="{ duration: 0.6, delay: 0.2 }"
       >
         {{ text }}
       </motion.span>
@@ -15,7 +15,7 @@
         :initial="{ opacity: 0, y: 20 }"
         :while-in-view="{ opacity: 1, y: 0 }"
         :in-view-options="{ once: true }"
-        :transition="{ duration: 1.2, delay: 0.8 }"
+        :transition="{ duration: 0.6, delay: 0.2 }"
       >
         {{ text }}
       </motion.h1>

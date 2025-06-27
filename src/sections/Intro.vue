@@ -11,9 +11,19 @@
           :initial="{ opacity: 0, y: 20 }"
           :while-in-view="{ opacity: 1, y: 0 }"
           :in-view-options="{ once: true }"
-          :transition="{ duration: 1, delay: 1.2 }"
+          :transition="{ duration: 0.6, delay: 0.6 }"
         >
-          <span class="text-3xl">I'm</span> Vineet Kumar
+          <span
+            v-for="(char, i) in 'I\'m Vineet Kumar'.split('')" :key="i"
+          >
+            <motion.span
+              :initial="{ opacity: 0, y: 200 }"
+              :animate="{ opacity: 1, y: 0 }"
+              :transition="{ delay: 0.1 + i * 0.1, duration: 0.6 }"
+            >
+              {{ char }}
+            </motion.span>
+          </span>
         </motion.h2>
   
         <motion.p
@@ -21,7 +31,7 @@
           :initial="{ opacity: 0, y: 20 }"
           :while-in-view="{ opacity: 1, y: 0 }"
           :in-view-options="{ once: true }"
-          :transition="{ duration: 0.8, delay: 1.4 }"
+          :transition="{ duration: 0.6, delay: 1 }"
         >
           Frontend engineer passionate about building elegant, performant web experiences.
         </motion.p>
@@ -31,7 +41,7 @@
           :initial="{ opacity: 0, y: 20 }"
           :while-in-view="{ opacity: 1, y: 0 }"
           :in-view-options="{ once: true }"
-          :transition="{ duration: 0.8, delay: 1.6 }"
+          :transition="{ duration: 0.6, delay: 1.1 }"
         >
           I enjoy working across the frontend ecosystem, designing delightful interfaces and building scalable UI systems. With this portfolio, I want to showcase not just my skills but also the philosophy behind how I craft digital experiences.
         </motion.p>
@@ -40,10 +50,10 @@
       <!-- Right: Image Placeholder -->
       <motion.div
         class="flex-1 flex max-w-md"
-        :initial="{ opacity: 0, scale: 0 }"
+        :initial="{ opacity: 0, scale: 0.8 }"
         :while-in-view="{ opacity: 1, scale: 1 }"
         :in-view-options="{ once: true }"
-        :transition="{ duration: 1.5, delay: 2 }"
+        :transition="{ duration: 0.8, delay: 1 }"
       >
         <div class="flex justify-center items-center">
           <div class="relative size-60 lg:size-80 flex justify-center items-center">

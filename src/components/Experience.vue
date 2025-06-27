@@ -4,7 +4,7 @@
       class="text-2xl font-heading font-bold text-foreground mb-8"
       :initial="{ opacity: 0, x: 20 }"
       :while-in-view="{ opacity: 1, x: 0 }"
-      :transition="{ duration: 1, delay: 0.8, type: 'spring' }"
+      :transition="{ duration: 0.8, delay: 0.5 }"
       :in-view-options="{ once: true }"
     >
       {{ title }}
@@ -14,7 +14,7 @@
         <motion.li
           :initial="{ opacity: 0, x: 20 }"
           :while-in-view="{ opacity: 1, x: 0 }"
-          :transition="{ duration: 1, delay: index * 0.2 }"
+          :transition="{ duration: 0.8, delay: 0.5 + (index * 0.2) }"
           :in-view-options="{ once: true }"
         >
           <p class="font-bold">{{ experience.title }}</p>

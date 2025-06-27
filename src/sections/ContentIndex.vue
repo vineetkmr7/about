@@ -9,23 +9,30 @@
       class="relative flex-1 max-w-7xl p-4 flex flex-col items-start justify-between gap-12"
     >
       <Heading class="self-center" :text="title" />
-      <div
+      <template
         v-for="(item, index) in projects"
         :key="index"
-        class="flex w-full items-center justify-between"
       >
-        <div class="flex flex-col">
-          <p class="text-lg font-semibold font-heading text-foreground">{{ item.client }}</p>
-          <p class="text-sm italic font-body text-gray-700 dark:text-gray-300">
-            {{ item.name }}
-          </p>
-        </div>
-        <motion.p
-          class="border-b dark:border-gray-600 mx-12"
-          :style="{ width }"
-        />
-        <div class="text-nowrap text-xs text-gray-700 dark:text-gray-300">P/ {{ item.page }}</div>
-      </div>
+        <motion.div
+          class="flex w-full items-center justify-between"
+          :initial="{ opacity: 0, y: 20 }"
+          :while-in-view="{ opacity: 1, y: 0 }"
+          :in-view-options="{ once: true }"
+          :transition="{ duration: 0.6, delay: 0.6 + (index * 0.1) }"
+        >
+          <div class="flex flex-col">
+            <p class="text-lg font-semibold font-heading text-foreground">{{ item.client }}</p>
+            <p class="text-sm italic font-body text-gray-700 dark:text-gray-300">
+              {{ item.name }}
+            </p>
+          </div>
+          <motion.p
+            class="border-b dark:border-gray-600 mx-12"
+            :style="{ width }"
+          />
+          <div class="text-nowrap text-xs text-gray-700 dark:text-gray-300">P/ {{ item.page }}</div>
+        </motion.div>
+      </template>
     </div>
   </section>
 </template>

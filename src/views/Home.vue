@@ -7,7 +7,7 @@ import Resume from '@/sections/Resume.vue';
 </script>
 
 <template>
-  <Hero class="space-y-8" />
+  <!-- <Hero class="space-y-8" /> -->
   <Intro />
   <Resume />
   <ContentIndex />

@@ -5,7 +5,7 @@
       :initial="{ opacity: 0, y: 20 }"
       :while-in-view="{ opacity: 1, y: 0 }"
       :in-view-options="{ once: true }"
-      :transition="{ duration: 1, delay: 1 }"
+      :transition="{ duration: 0.6, delay: 1 }"
     >
       {{ title }}
     </motion.h2>
@@ -16,7 +16,7 @@
           :initial="{ opacity: 0, y: 20 }"
           :while-in-view="{ opacity: 1, y: 0 }"
           :in-view-options="{ once: true }"
-          :transition="{ duration: 1, delay: 1 + (index * 0.2) }"
+          :transition="{ duration: 0.6, delay: 1 + (index * 0.1) }"
         >
           <AIcon v-if="skill?.icon" :name="skill.icon" />
           <span v-else class="size-6"></span>
