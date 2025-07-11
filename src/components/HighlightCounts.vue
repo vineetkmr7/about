@@ -19,10 +19,21 @@
 </template>
 <script setup>
 import { motion } from 'motion-v'
+import { computed } from 'vue'
+const experience = computed(() => {
+  const now = new Date();
+  const start = new Date("2015-07-13"); // Replace with your actual start date
+  const years = now.getFullYear() - start.getFullYear();
+  const months = now.getMonth() - start.getMonth();
+  if (months < 0 || (months === 0 && now.getDate() < start.getDate())) {
+    return `${years - 1}+`; // Adjust for incomplete year
+  }
+  return `${years}+`;
+});
 const counters = [
   {
     label: "Total years of experience",
-    value: "10+"
+    value: experience
   },
   {
     label: "Production ready projects",
