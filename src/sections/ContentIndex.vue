@@ -3,7 +3,7 @@
     class="relative flex items-center justify-center w-full  px-6 py-20 bg-background text-foreground transition-colors duration-500"
     ref="index-container"
   >
-    <PageNumber title="Summary" :page-number="4" />
+    <PageNumber title="Summary" :page-number="3" />
     <div
       ref="index-target"
       class="relative flex-1 max-w-7xl p-4 flex flex-col items-start justify-between gap-12"
@@ -53,6 +53,4 @@ const { scrollYProgress } = useScroll({
 })
 
 const width = useTransform(scrollYProgress, [0.1, 0.5], ["0", "50%"])
-
-console.log("here projects => ", projects)
 </script>

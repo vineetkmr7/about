@@ -38,7 +38,7 @@
       </div>
 
       <motion.div
-        class="absolute bottom-16 left-16 text-left text-xs text-gray-500"
+        class="absolute bottom-24 left-24 text-left text-xs text-gray-500"
         :initial="{ opacity: 0 }"
         :animate="{ opacity: 1 }"
         :transition="{ duration: 1, delay: 2.4 }"

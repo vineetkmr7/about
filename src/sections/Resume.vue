@@ -1,6 +1,6 @@
 <template>
   <section class="relative flex justify-center items-center w-full bg-background text-foreground px-6 py-20 transition-colors duration-500">
-    <PageNumber title="Resume" :page-number="3" />
+    <PageNumber title="Resume" :page-number="2" />
     <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 p-4">
 
       <!-- Left Column -->

@@ -1,6 +1,6 @@
 <template>
   <section class="relative w-full flex justify-center bg-background text-foreground px-6 py-20">
-    <PageNumber title="Intro" :page-number="2" />
+    <PageNumber title="Intro" :page-number="1" />
     <div class="w-9/10 flex flex-col lg:flex-row items-center justify-between gap-10">
       <!-- Left: Text Content -->
       <div class="flex-1 max-w-4xl p-4">

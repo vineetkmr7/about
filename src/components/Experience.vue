@@ -1,7 +1,7 @@
 <template>
   <div>
     <motion.h2
-      class="text-2xl font-heading font-bold text-foreground mb-8"
+      class="text-2xl font-heading font-bold text-foreground mb-8 text-center md:text-left"
       :initial="{ opacity: 0, x: 20 }"
       :while-in-view="{ opacity: 1, x: 0 }"
       :transition="{ duration: 0.8, delay: 0.5 }"
@@ -17,13 +17,37 @@
           :transition="{ duration: 0.8, delay: 0.5 + (index * 0.2) }"
           :in-view-options="{ once: true }"
         >
-          <p class="font-bold">{{ experience.title }}</p>
-          <p class="text-sm italic text-gray-700 dark:text-gray-300 mb-4">
-            {{ experience.subTitle }} | {{ experience.timeline}}
-          </p>
-          <p class="text-sm text-gray-700 dark:text-gray-300">
-            {{ experience.description}}
-          </p>
+          <div class="flex items-center mb-4 gap-4">
+            <img
+              v-if="experience.logoPath"
+              :src="experience.logoPath"
+              :alt="`${experience.title} Logo`"
+              class="w-20 h-auto rounded-full bg-gray-100 dark:bg-gray-300"
+            />
+            <div>
+              <p class="font-bold">{{ experience.company }}</p>
+              <p class="text-sm text-gray-700 dark:text-gray-300">
+                {{ experience.description}}
+              </p>
+            </div>
+          </div>
+          <template v-if="experience.roles && experience.roles.length">
+            <ul class="">
+              <li
+                v-for="role in experience.roles" :key="role.title"
+                class="text-gray-700 dark:text-gray-300 mb-2 flex gap-4"
+              >
+                <div class="relative w-10 ml-10 mt-8 border-l-2 border-gray-300 dark:border-gray-600">
+                  <span class="absolute -top-6 -left-1.5 size-3 rounded-full bg-gray-300 dark:bg-gray-600"></span>
+                </div>
+                <div class="mb-8">
+                  <p>{{ role.title }}</p>
+                  <p class="text-sm mb-4 text-gray-700 dark:text-gray-300">{{ role.timeline }}</p>
+                  <p class="text-sm italic text-gray-700 dark:text-gray-300">{{ role.location }}</p>
+                </div>
+              </li>
+            </ul>
+          </template>
         </motion.li>
       </template>
     </ul>
@@ -35,42 +59,4 @@ import { motion } from 'motion-v'
 import { useExperienceStore } from '@/stores/experience';
 
 const { title, experience: experienceItems } = useExperienceStore();
-
-const experiences = [
-  {
-    company: 'Croix Rouge',
-    role: 'Partnership Project',
-    duration: 'Jan – Jun 2024',
-    description:
-      'Designed sustainable furniture solutions using wood and recycled rope for the French Red Cross addressing poor housing conditions.',
-  },
-  {
-    company: 'ESCP Business School',
-    role: 'Entrepreneurship Program',
-    duration: 'Sep – Dec 2023',
-    description:
-      'Developed a healthcare startup to improve medical file management, earning the “Best Ready to Invest Project” award.',
-  },
-  {
-    company: 'Safran Seats',
-    role: 'Internship',
-    duration: 'Mar – Aug 2023',
-    description:
-      '3D renderings of Business suits and First Class for Japan Airlines, Qatar Airways, and Emirates within the Advanced Concept Team.',
-  },
-  {
-    company: 'Centrale Lyon',
-    role: 'EPSA Team',
-    duration: '2022 – 2024 Season',
-    description:
-      'Integration in the design department for EPSA team at Centrale Lyon, designing the steering wheel, dashboard, and wrapping of the Formula Student car.',
-  },
-  {
-    company: 'Strate',
-    role: 'Communication Team',
-    duration: '2021 – 2024',
-    description:
-      'Oversaw the 300 m² workshop at Strate: 3D printers, laser cutting, woodworking machines, and project creation for Hermès and Bouygues Real Estate.',
-  },
-]
 </script>
