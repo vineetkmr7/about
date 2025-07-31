@@ -33,7 +33,7 @@
           :in-view-options="{ once: true }"
           :transition="{ duration: 0.6, delay: 1 }"
         >
-          Frontend engineer passionate about building elegant, performant web experiences.
+          <b>Fullstack engineer (Frontend heavy)</b> passionate about building elegant, performant web experiences.
         </motion.p>
   
         <motion.p
