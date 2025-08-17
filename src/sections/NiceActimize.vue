@@ -45,12 +45,12 @@
         </p>
       </div>
       <div class="flex-1">
-        <img src="/ifmx-problem.png" alt="Nice Actimize Logo" class="w-full mx-auto mb-4" />
+        <img src="/ifmx-problem.png" alt="Nice Actimize Logo" class="w-full mx-auto mb-4 dark:opacity-95" />
       </div>
     </div>
-    <div class="max-w-7xl mx-auto mt-12 px-4 flex gap-8 items-center flex-col md:flex-row">
+    <div class="max-w-7xl mx-auto mt-12 px-4 flex gap-8 items-center flex-col-reverse md:flex-row">
       <div class="flex-1">
-        <img src="/ifmx-solution.png" alt="Nice Actimize Logo" class="w-full mx-auto mb-4" />
+        <img src="/ifmx-solution.png" alt="Nice Actimize Logo" class="w-full mx-auto mb-4 dark:opacity-95" />
       </div>
       <div class="flex-1">
         <h2 class="text-2xl font-heading font-bold text-foreground mb-8 text-center md:text-left">
