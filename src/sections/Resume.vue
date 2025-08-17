@@ -7,7 +7,7 @@
       <div class="space-y-12">
         <Heading class="text-center lg:text-left" text="Resume." />
         <HighlightCounts class="text-center lg:text-left" />
-        <Skills class="text-center lg:text-left" />
+        <Skills class="text-center lg:text-left" title="Skills / Techs" :skills="skillItems" />
         <Education class="text-center lg:text-left" />
       </div>
 
@@ -25,7 +25,9 @@ import Heading from '@/components/Heading.vue';
 import Skills from '@/components/Skills.vue';
 import PageNumber from '@/components/PageNumber.vue';
 import HighlightCounts from '@/components/HighlightCounts.vue';
+import { useSkillsStore } from '@/stores/skills';
 
+const { skills: skillItems } = useSkillsStore();
 // No animation yet, can add motion-v if needed later
 </script>
 

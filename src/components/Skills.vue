@@ -10,7 +10,7 @@
       {{ title }}
     </motion.h2>
     <ul class="grid grid-cols-2 gap-4 text-sm text-gray-700 dark:text-gray-300">
-      <template v-for="(skill, index) of skillItems" :key="index">
+      <template v-for="(skill, index) of skills" :key="index">
         <motion.li
           class="justify-center lg:justify-start flex gap-4 items-center"
           :initial="{ opacity: 0, y: 20 }"
@@ -28,9 +28,17 @@
 </template>
 <script setup>
 import { motion } from 'motion-v'
-import { useSkillsStore } from '@/stores/skills';
 import AIcon from './AIcon.vue';
 
-const { skills: skillItems, title } = useSkillsStore();
+defineProps({
+  title: {
+    type: String,
+    default: 'Skills'
+  },
+  skills: {
+    type: Array,
+    default: () => []
+  }
+});
 
 </script>

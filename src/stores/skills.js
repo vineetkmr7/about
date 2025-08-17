@@ -20,6 +20,11 @@ export const useSkillsStore = defineStore('skills', () => {
       proficiency: 8.5,
     },
     {
+      label: 'Tailwind',
+      icon: 'tailwind',
+      proficiency: 7,
+    },
+    {
       label: 'Vue',
       icon: 'vue',
       proficiency: 8,
@@ -40,5 +45,27 @@ export const useSkillsStore = defineStore('skills', () => {
       proficiency: 7,
     },
   ])
-  return { skills, title }
+  const actimizeSkills = ref([
+    {
+      label: 'HTML',
+      icon: 'html',
+      proficiency: 9,
+    },
+    {
+      label: 'CSS',
+      icon: 'css',
+      proficiency: 8.5,
+    },
+    {
+      label: 'JavaScript',
+      icon: 'js',
+      proficiency: 8.5,
+    },
+    {
+      label: 'Vue',
+      icon: 'vue',
+      proficiency: 8,
+    },
+  ])
+  return { skills, title, actimizeSkills }
 })

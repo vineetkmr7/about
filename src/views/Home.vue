@@ -12,6 +12,6 @@ import Resume from '@/sections/Resume.vue';
   <Intro />
   <Resume />
   <ContentIndex />
-  <!-- <NiceActimize /> -->
+  <NiceActimize />
   <Contact />
 </template>

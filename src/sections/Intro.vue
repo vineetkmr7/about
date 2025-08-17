@@ -27,7 +27,7 @@
         </motion.h2>
   
         <motion.p
-          class="text-sm text-center lg:text-left md:text-base font-body text-gray-500 dark:text-gray-500 italic mb-6"
+          class="text-sm text-center lg:text-left md:text-base font-body text-gray-500 dark:text-gray-300 italic mb-6"
           :initial="{ opacity: 0, y: 20 }"
           :while-in-view="{ opacity: 1, y: 0 }"
           :in-view-options="{ once: true }"
@@ -37,7 +37,7 @@
         </motion.p>
   
         <motion.p
-          class="text-sm text-center lg:text-left md:text-base pt-8 font-body text-gray-500 dark:text-gray-500 leading-relaxed"
+          class="text-sm text-center lg:text-left md:text-base pt-8 font-body text-gray-500 dark:text-gray-300 leading-relaxed"
           :initial="{ opacity: 0, y: 20 }"
           :while-in-view="{ opacity: 1, y: 0 }"
           :in-view-options="{ once: true }"

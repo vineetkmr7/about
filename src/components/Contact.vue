@@ -2,7 +2,7 @@
   <section
     class="relative flex justify-center w-full bg-background text-foreground px-6 py-20 transition-colors duration-500"
   >
-    <PageNumber title="Contact" :page-number="4" />
+    <PageNumber title="Contact" :page-number="5" />
     <div class="w-full max-w-7xl flex flex-col lg:flex-row justify-around gap-10 items-center">
       <Heading text="Thank you." class="mb-8" />
       <div class="flex flex-col">
